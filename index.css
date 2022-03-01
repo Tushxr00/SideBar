@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+ :root {
+    --first-font: 'Josefin Sans', sans-serif;
+    --white: #ffffff;
+    --black: #000000;
+    --light: #42cbf8;
+    --peach: #FFE5B4;
+    --red: rgb(199, 14, 14);
+    --grey: rgb(122, 120, 120);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--peach);
+    text-transform: capitalize;
+    font-size: 1.5rem;
+}
+
+button {
+    font-size: 1.5rem;
+    color: var(--black);
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+button:hover {
+    color: var(--light);
+    transform: rotate(90deg);
+    transition: 0.5s;
+}
+
+button:not(:hover) {
+    transform: rotate(0deg);
+    transition: 0.5s;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--light);
+}
+
+.sidebar-toggle {
+    position: fixed;
+    top: 1.5rem;
+    right: 3.5rem;
+    font-size: 2rem;
+    background: transparent;
+    border-color: transparent;
+    color: var(--black);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    transform: translate(-100%);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 1rem;
+    transition: 2s;
+}
+
+.show-sidebar {
+    transform: translate(0);
+}
+
+.logo {
+    justify-self: center;
+    height: 40px;
+}
+
+.sidebar-header {
+    display: flex;
+    padding: 1.5rem;
+    justify-content: space-between;
+}
+
+.x-btn:hover {
+    color: var(--red)
+}
+
+.links {
+    padding: 1rem;
+}
+
+.links li {
+    padding-top: 0.5rem;
+    font-size: 2rem;
+}
+
+.links li:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+    margin-left: 1.3rem;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+}
+
+.social li {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.social li:hover {
+    transform: scale(1.3);
+    transition: 0.5s;
+}
